@@ -1,7 +1,16 @@
 package main
 
-import "os"
+import (
+	"os"
+
+	"github.com/sirupsen/logrus"
+)
 
 func main() {
-	os.Exit(1)
+	rootCmd := cmd.NewRootCmd()
+
+	if err := rootCmd.Execute(); err != nil {
+		logrus.WithError(err).Error(err.Error())
+		os.Exit(1)
+	}
 }
