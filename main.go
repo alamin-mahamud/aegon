@@ -3,6 +3,7 @@ package main
 import (
 	"os"
 
+	"github.com/alamin-mahamud/aegon/cmd"
 	"github.com/sirupsen/logrus"
 )
 
